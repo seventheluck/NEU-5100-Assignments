@@ -34,6 +34,7 @@ class Employee {
     // Add a new method in Employee class
     public void raiseSalary(double byPercent) {
         this.salary = this.salary * byPercent / 100;
+        System.out.println(this.salary);
     }
 }
 
@@ -53,8 +54,10 @@ public class Assignment2 {
      */
     public double socialSecurityTax(Employee employee) {
         if (employee.salary <= 8900) {
+            System.out.println(employee.salary * 0.062);
             return employee.salary * 0.062;
         } else {
+            System.out.println(106800 * 0.062);
             return 106800 * 0.062;
         }
     }
@@ -67,12 +70,16 @@ public class Assignment2 {
      */
     public double insuranceCoverage(Employee employee) {
         if (employee.age < 35) {
+            System.out.println(employee.salary * 0.03);
             return employee.salary * 0.03;
         } else if (employee.age >= 35 && employee.age <= 50) {
+            System.out.println(employee.salary * 0.04);
             return employee.salary * 0.04;
         } else if (employee.age > 50 && employee.age <= 60) {
+            System.out.println(employee.salary * 0.05);
             return employee.salary * 0.05;
         } else {
+            System.out.println(employee.salary * 0.06);
             return employee.salary * 0.06;
         }
     }
